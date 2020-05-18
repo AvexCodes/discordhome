@@ -6,7 +6,7 @@ import json
 
 #import cogs.converter
 import sys
-# sys.path.append("..")
+
 from misc import methods as m
 
 class Colours(commands.Cog):
@@ -17,6 +17,11 @@ class Colours(commands.Cog):
     
     @commands.command(name="preview", aliases=["pre", 'precol', 'previewcolour'])
     async def _preview(self, ctx, r: int, g: int, b: int):
+        """
+        Preview a colour
+
+        Takes 3 ints, r g b.
+        """
         hex = m.rgbToHex(r, g, b)
         colName = m.getColNameByRGB(r, g, b)
         embed=discord.Embed(title=f"{colName}", description=f"RGB: {r} {g} {b}\nHex: {hex}")

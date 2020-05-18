@@ -32,11 +32,11 @@ class LightController(commands.Cog):
         if self.data['allowDiscordChange'] == True:
             m.turnOff(self.ip, self.user, lid)
 
-            embed=discord.Embed(title=f"Light {lid} Turned On!", url="https://auto.avex.dev", description=f"Succesfully turned light {lid} on!")
+            embed=discord.Embed(title=f"Light {lid} Turned Off!", url="https://auto.avex.dev", description=f"Succesfully turned light {lid} off!")
             embed.set_thumbnail(url="https://images.squarespace-cdn.com/content/v1/59937b8f2994cae8c280ca6c/1504903605561-PYMALOQSSWJRGYEKD8QK/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyLLXgctAyUJRqJUUGWVDK_ZzIgvsybGcZEPqUYiXY8im/Yonomi+-+Philips+Hue+A19+Smart+Color+Bulb.jpg")
             await ctx.send(embed=embed)
         else:
-            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status", color=0xff0000)
+            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status\n\nClick [here](https://avex.dev/errors/1) to view error", color=0xff0000)
             await ctx.send(embed=embed)
 
 
@@ -59,7 +59,7 @@ class LightController(commands.Cog):
             embed.set_thumbnail(url="https://www.assets.signify.com/is/image/PhilipsLighting/80cc70d6f53343cc8baea9b9009d764d?&wid=110&hei=110&$jpglarge$")
             await ctx.send(embed=embed)
         else:
-            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status", color=0xff0000)
+            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status\n\nClick [here](https://avex.dev/errors/1) to view error", color=0xff0000)
             await ctx.send(embed=embed)
 
     @commands.command(name="changecolour", aliases=["rgb"])
@@ -86,7 +86,7 @@ class LightController(commands.Cog):
             embed.set_thumbnail(url=f"{m.getColImage(r, g, b)}")
             await ctx.send(embed=embed)
         else:
-            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status", color=0xff0000)
+            embed=discord.Embed(title="Error: 1 (Permission Denied)", url="https://auto.avex.dev/errors?id=1", description="Sorry, but any remote change, via discord or auto.avex.dev has been disabled! Stay tuned for a change in #status\n\nClick [here](https://avex.dev/errors/1) to view error", color=0xff0000)
             await ctx.send(embed=embed)
         
 def setup(bot):
