@@ -12,6 +12,5 @@ def stringify(json_to_encrypt):
 
 def writeJson(file, jsonData):
     with open(f"jsonFiles\{file}", "w") as f:
-        json.dumps
         json.dump(jsonData, f, indent=4)
         f.close()
